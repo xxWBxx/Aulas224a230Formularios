@@ -1,26 +1,30 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgModule } from '@ng-bootstrap/ng-bootstrap';
-import { CadastroAlunoReactiveComponent } from './components/cadastro-aluno-reactive/cadastro-aluno-reactive.component';
-import { cadastroAlunoTemplateComponent } from './components/cadastro-aluno-template/cadastro-aluno-template.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas.component';
+import { AddTarefaComponent } from './components/add-tarefa/add-tarefa.component';
+import { EditarTarefaComponent } from './components/editar-tarefa/editar-tarefa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declaration: [
-   AppComponent,
-   cadastroAlunoTemplateComponent,
-   CadastroAlunoReactiveComponent
+  declarations: [
+    AppComponent,
+    ListaTarefasComponent,
+    AddTarefaComponent,
+    EditarTarefaComponent,
   ],
   imports: [
-   BrowserModule,
-   AppRoutingModule,
-   NgModule,
-   FormsModule
-   ReactiveFormsModule
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
- })
- export class AppModule {}
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
